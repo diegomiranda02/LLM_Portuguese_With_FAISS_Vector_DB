@@ -1,25 +1,22 @@
 from factories.tools_factories import ToolFactory
-from tools.report_tools import ToolWhoCreateDocumentOfTCUReport
-from tools.report_tools import ToolWhoCreateWorkReportHistory
+from agents.agent import Agent
+from tools.report_tools import *
 
-from models import BERT_portuguese_model_api
-
-tool = ToolWhoCreateDocumentOfTCUReport('Teste');
+# Create the tool factory
 toolFactory = ToolFactory()
-toolFactory.register_tool(ToolWhoCreateDocumentOfTCUReport('Teste').description, ToolWhoCreateDocumentOfTCUReport('Teste'))
-toolFactory.register_tool(ToolWhoCreateWorkReportHistory('Teste2').description, ToolWhoCreateWorkReportHistory('Teste2'))
+toolFactory.register_tool(ToolWhoCreateDocumentOfTCUReport().description, ToolWhoCreateDocumentOfTCUReport())
+toolFactory.register_tool(ToolWhoCreateWorkReportHistory().description, ToolWhoCreateWorkReportHistory())
+toolFactory.register_tool(ToolWhoCreateFinancialReport().description, ToolWhoCreateFinancialReport())
 toolFactory.generate_tools_vector_database()
 
-question_one = "Gere um relatorio do TCU do ano de 2022"
-question_two = "Gere um relatorio funcional do servidor Diego Miranda de Paula, matricula 12345"
+command = "Gere um relatorio financeiro no mes 04 e no ano de 2023"
+# command = "Gere um relatorio funcional do servidor Diego Miranda de Paula, matricula 12345"
 
-toolOneCalled = toolFactory.get_tool(question_one)
-print('toolOneCalled')
+# Getting the tool to execute the command
+tool = toolFactory.get_tool(command)
 
-toolTwoCalled = toolFactory.get_tool(question_two)
-print('toolTwoCalled')
+agent = Agent(tool)
+agent.executeCommand(command)
 
-print(BERT_portuguese_model_api.getAnswer(question_one, toolOneCalled.which_year()))
 
-print(BERT_portuguese_model_api.getAnswer(question_two, toolTwoCalled.who_is_the_person()))
 
