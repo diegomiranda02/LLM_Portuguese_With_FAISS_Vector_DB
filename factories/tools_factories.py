@@ -12,8 +12,8 @@ class ToolFactory:
         self._tools[description] = tool
 
     def get_tool(self, command: str):
-        tool_descritpion = self.__llm_model.getAnswer(command, 4)
-        return self._tools.get(tool_descritpion)
+        tool_description = self.__llm_model.getAnswer(command, 4)
+        return self._tools.get(tool_description)
     
     def get_tools_description_list(self):
         return list(self._tools.keys())

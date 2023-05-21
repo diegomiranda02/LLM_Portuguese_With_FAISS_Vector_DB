@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
+from typing import Dict
 
 class ToolInterface(ABC):
 
   @abstractmethod
-  def run(self, command: str) -> str:
+  def run(self, requirements: Dict[str, str]) -> str:
     pass
 
   @abstractmethod
