@@ -109,33 +109,22 @@ class ToolWhoCreateFinancialReport(ToolInterface):
   WHICH_YEAR = 'Qual ano?'
 
   # System URL
-  SYSTEM_URL = 'http://localhost:8080/report'
+  SYSTEM_URL = 'http://localhost:8088/report'
 
   def run(self, requirements: Dict[str, str]) -> str:
     print(requirements)
 
-    print("URL: {}/report?reportType={}&month={}&year={}".format(self.SYSTEM_URL, 
+    print("URL: {}?reportType={}&month={}&year={}".format(self.SYSTEM_URL, 
                            requirements[self.WHICH_REPORT], 
                            requirements[self.WHICH_MONTH], 
                            requirements[self.WHICH_YEAR]
                            ))
     
-    # a Python object (dict):
-    x = {
-      "text": "A ficha funcional é o documento eletrônico que demonstra todas as ocorrências funcionais já registradas: investidura, movimentação e vacância de cargos e funções, averbação de tempo de serviço, auxílios, benefícios, dependentes, descontos, faltas, folgas e licenças, gratificações, substituições e vantagens pessoais.",
-      "age": 30,
-      "city": "New York",
-      "technologies" : 
-          [
-         { "Courses": "Spark", "Fee": 22000,"Duration":"40Days"},
-         { "Courses": "PySpark","Fee": 25000,"Duration":"60Days"},
-         { "Courses": "Hadoop", "Fee": 23000,"Duration":"50Days"}
-         ]
-    }
-
-    # convert into JSON:
-    y = json.dumps(x)
-    return y
+    return "{}?reportType={}&month={}&year={}".format(self.SYSTEM_URL, 
+                           requirements[self.WHICH_REPORT], 
+                           requirements[self.WHICH_MONTH], 
+                           requirements[self.WHICH_YEAR]
+                           )
     
   def requirements_to_use(self) -> str:
     # Requirements to use the tool
