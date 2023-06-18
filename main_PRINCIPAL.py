@@ -9,7 +9,7 @@ toolFactory.register_tool(ToolWhoCreateWorkReportHistory().description, ToolWhoC
 toolFactory.register_tool(ToolWhoCreateFinancialReport().description, ToolWhoCreateFinancialReport())
 toolFactory.generate_tools_vector_database()
 
-command = "Gere um relatorio financeiro no mes de abril e no ano de 2023"
+command = "Gere um relatorio financeiro do mes de abril e no ano de 2023"
 # command = "Gere um relatorio funcional do servidor Diego Miranda de Paula, matricula 12345"
 
 # Getting the tool to execute the command

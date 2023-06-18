@@ -13,6 +13,7 @@ toolFactory = ToolFactory()
 toolFactory.register_tool(ToolWhoCreateDocumentOfTCUReport().description, ToolWhoCreateDocumentOfTCUReport())
 toolFactory.register_tool(ToolWhoCreateWorkReportHistory().description, ToolWhoCreateWorkReportHistory())
 toolFactory.register_tool(ToolWhoCreateFinancialReport().description, ToolWhoCreateFinancialReport())
+toolFactory.register_tool(ToolWhichCreatesAReportOfTheMostSoldProducts().description, ToolWhichCreatesAReportOfTheMostSoldProducts())
 toolFactory.generate_tools_vector_database()
 
 # Instantiate the API
