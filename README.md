@@ -34,6 +34,7 @@ Uma vantagem dessa solução é que pode-se usar algoritmos que rodam em CPU, ba
 
 O exemplo para demonstrar a utilização do projeto na prática é a solicitação de um relatório financeiro em determinado mês e determinado ano. Conforme figura abaixo:
 
+![Passo a passo do uso do framework 1 (1)](https://github.com/diegomiranda02/LLM_Portuguese_With_FAISS_Vector_DB/assets/9868024/492cf05e-4f21-4912-85ff-4e53d3f04d3e)
 
 
 
