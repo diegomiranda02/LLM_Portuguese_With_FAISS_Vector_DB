@@ -24,7 +24,7 @@ Para o projeto serão utilizadas as seguintes ferramentas:
 - FAISS como banco de dados de vetor;
 - Um algoritmo de LLM da Hugging Face para embedding ([ricardo-filho/bert-base-portuguese-cased-nli-assin-2](https://huggingface.co/ricardo-filho/bert-base-portuguese-cased-nli-assin-2))
 - Um algoritmo da Hugging Face para Question Answering ([pierreguillou/bert-base-cased-squad-v1.1-portuguese](https://huggingface.co/pierreguillou/bert-base-cased-squad-v1.1-portuguese))
-- Um projeto desenvolvido em Python para possibilitar a implementação da abordagem descrito nesse artigo.
+- Um projeto desenvolvido em Python para possibilitar a implementação da abordagem descrita nesse artigo.
 - Uma interface em Streamlit para acesso do usuário (Código fonte em [frontend_LLM_Project](https://github.com/diegomiranda02/frontend_LLM_Project))
 - Um serviço web para disponibilizar os endpoints que fornecerão os acessos aos sistemas (Código fonte em [python_api_server](https://github.com/diegomiranda02/python_api_server))
 
