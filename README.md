@@ -38,14 +38,14 @@ O exemplo para demonstrar a utilização do projeto na prática é a solicitaç�
 
 # Para executar o programa siga os seguintes passos:
 
-1 - Instalar as dependências descritas no arquivo environment.yml (Neste exemplo foi utilizado o software Anaconda)
-2 - Baixar o projeto https://github.com/diegomiranda02/python_api_server e executar em uma porta distinta das que já estão sendo utilizadas por outros serviços. IMPORTANTE: A porta definida ao executar o serviço deverá ser a mesma utilizada para informar às ferramentas qual URL acessar.
-3 - Executar o serviço API server do projeto anterior
-4 - No projeto atual executar o python3 main_CONSOLE.py para executar no console.
+- Instalar as dependências descritas no arquivo environment.yml (Neste exemplo foi utilizado o software Anaconda)
+- Baixar o projeto https://github.com/diegomiranda02/python_api_server e executar em uma porta distinta das que já estão sendo utilizadas por outros serviços. IMPORTANTE: A porta definida ao executar o serviço deverá ser a mesma utilizada para informar às ferramentas qual URL acessar.
+- Executar o serviço API server do projeto anterior
+- No projeto atual executar o python3 main_CONSOLE.py para executar no console.
 
 Caso deseje utilizar uma interface web, siga o dois passos a seguir:
-1 - Baixe o projeto https://github.com/diegomiranda02/frontend_LLM_Project e execute a aplicação em Streamlit
-2 - No projeto atual executar o python3 main.py para executar o serviço FAST API que será consumido pela aplicação Streamlit.
+- Baixe o projeto https://github.com/diegomiranda02/frontend_LLM_Project e execute a aplicação em Streamlit
+- No projeto atual executar o python3 main.py para executar o serviço FAST API que será consumido pela aplicação Streamlit.
 
 A implementação feita nesse artigo foi para demonstrar que é possivel utilizar LLMs com um custo mais baixo, acessando as funcionalidades dos sistemas já existentes nas empresas. Nessa solução não foram implementadas a segurança, a autenticação e a autorização de acesso aos dados. Para implantar em produção, todos esses detalhes precisam ser avaliados de acordo com a necessidade do projeto.
 
