@@ -102,7 +102,6 @@ class ToolWhoCreateFinancialReport(ToolInterface):
   name = 'Ferramenta para criar um relatorio financeiro' # Class variable. Shared among all objects
   description = 'Use essa ferramenta quando for para criar um relatorio financeiro' # Class variable. Shared among all objects
 
-
   # Requirements 
   WHICH_REPORT = 'Qual relatorio?'
   WHICH_MONTH = 'Em que mes?'
@@ -129,6 +128,100 @@ class ToolWhoCreateFinancialReport(ToolInterface):
   def requirements_to_use(self) -> str:
     # Requirements to use the tool
     requirements = [self.WHICH_REPORT, self.WHICH_MONTH, self.WHICH_YEAR]
+    return requirements
+  
+class ToolWhichAddNewEmployent(ToolInterface):
+
+  name = 'Ferramenta para cadastrar um novo funcionario' # Class variable. Shared among all objects
+  description = 'Use essa ferramenta quando for para cadastrar um novo funcionario' # Class variable. Shared among all objects
+
+  # Requirements 
+  EMPLOYEE_NAME = 'Qual o nome do empregado?'
+  CPF = 'Qual CPF?'
+  RG = 'Qual RG?'
+  RG_ISSUANCE_DATE = "Quando foi emitida a RG?"
+  RG_ISSUER = "Qual foi o emissor da RG?"
+  EMPLOYEE_ADDRESS = "Onde a empregado reside?"
+  EMPLOYEE_ADDRESS_NUMBER = "Qual o numero da residencia?"
+  EMPLOYEE_ADDRESS_COMPLEMENT = "Qual o complemento?"
+  EMPLOYEE_APARTMENT_NUMBER = "Qual apartamento?"
+  EMPLOYEE_CONDOMINIUM = "Qual condominio?"
+  EMPLOYEE_CEP = "Qual CEP?"
+  EMPLOYEE_NEIGHBORHOOD = "Qual bairro?"
+  EMPLOYEE_STATE = "Em qual estado?"
+  EMPLOYEE_SALARY = "Qual o salario?"
+  EMPLOYEE_WORKLOAD = "Qual a carga horaria?"
+  EMPLOYEE_HOUR_A_DAY = "Quantas horas por dia?"
+  EMPLOYEE_CONTRACT = "Qual o regime de contratacao?"
+
+  # System URL
+  SYSTEM_URL = 'http://localhost:8088/addEmployee?'\
+                'employee_name={}&'\
+                'CPF={}&'\
+                'RG={}&'\
+                'RG_issuance_date={}&'\
+                'RG_issuer={}&'\
+                'employee_address={}&'\
+                'employee_address_number={}&'\
+                'employee_address_complement={}&'\
+                'employee_apartment_number={}&'\
+                'employee_condominium={}&'\
+                'employee_CEP={}&'\
+                'employee_neighborhood={}&'\
+                'employee_state={}&'\
+                'employee_salary={}&'\
+                'employee_worload={}&'\
+                'employee_hour_a_day={}&'\
+                'employee_contract={}'
+
+  def run(self, requirements: Dict[str, str]) -> str:
+    print(requirements)
+
+    print("URL: " + self.SYSTEM_URL.format(
+                           requirements[self.EMPLOYEE_NAME], 
+                           requirements[self.CPF], 
+                           requirements[self.RG],
+                           requirements[self.RG_ISSUANCE_DATE],
+                           requirements[self.RG_ISSUER],
+                           requirements[self.EMPLOYEE_ADDRESS],
+                           requirements[self.EMPLOYEE_ADDRESS_NUMBER],
+                           requirements[self.EMPLOYEE_ADDRESS_COMPLEMENT],
+                           requirements[self.EMPLOYEE_APARTMENT_NUMBER],
+                           requirements[self.EMPLOYEE_CONDOMINIUM],
+                           requirements[self.EMPLOYEE_CEP],
+                           requirements[self.EMPLOYEE_NEIGHBORHOOD],
+                           requirements[self.EMPLOYEE_STATE],
+                           requirements[self.EMPLOYEE_SALARY],
+                           requirements[self.EMPLOYEE_WORKLOAD],
+                           requirements[self.EMPLOYEE_HOUR_A_DAY],
+                           requirements[self.EMPLOYEE_CONTRACT]
+                           ))
+    
+    return self.SYSTEM_URL.format(
+                           requirements[self.EMPLOYEE_NAME], 
+                           requirements[self.CPF], 
+                           requirements[self.RG],
+                           requirements[self.RG_ISSUANCE_DATE],
+                           requirements[self.RG_ISSUER],
+                           requirements[self.EMPLOYEE_ADDRESS],
+                           requirements[self.EMPLOYEE_ADDRESS_NUMBER],
+                           requirements[self.EMPLOYEE_ADDRESS_COMPLEMENT],
+                           requirements[self.EMPLOYEE_APARTMENT_NUMBER],
+                           requirements[self.EMPLOYEE_CONDOMINIUM],
+                           requirements[self.EMPLOYEE_CEP],
+                           requirements[self.EMPLOYEE_NEIGHBORHOOD],
+                           requirements[self.EMPLOYEE_STATE],
+                           requirements[self.EMPLOYEE_SALARY],
+                           requirements[self.EMPLOYEE_WORKLOAD],
+                           requirements[self.EMPLOYEE_HOUR_A_DAY],
+                           requirements[self.EMPLOYEE_CONTRACT]
+                           )
+    
+  def requirements_to_use(self) -> str:
+    # Requirements to use the tool
+    requirements = [self.EMPLOYEE_NAME, self.CPF, self.RG, self.RG_ISSUANCE_DATE, self.RG_ISSUER, self.EMPLOYEE_ADDRESS, self.EMPLOYEE_ADDRESS_NUMBER, 
+                    self.EMPLOYEE_ADDRESS_COMPLEMENT, self.EMPLOYEE_APARTMENT_NUMBER, self.EMPLOYEE_CONDOMINIUM, self.EMPLOYEE_CEP, self.EMPLOYEE_NEIGHBORHOOD, 
+                    self.EMPLOYEE_STATE, self.EMPLOYEE_SALARY, self.EMPLOYEE_WORKLOAD, self.EMPLOYEE_HOUR_A_DAY, self.EMPLOYEE_CONTRACT]
     return requirements
 
 
