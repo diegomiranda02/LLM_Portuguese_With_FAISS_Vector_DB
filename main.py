@@ -1,6 +1,7 @@
 # fastapi libraries
 from fastapi import FastAPI
 from fastapi.responses import PlainTextResponse
+from fastapi import Response
 from fastapi.middleware.cors import CORSMiddleware
 
 # Project libraries
@@ -8,12 +9,15 @@ from factories.tools_factories import ToolFactory
 from agents.agent import Agent
 from tools.report_tools import *
 
+import json
+
 # Create the tool factory
 toolFactory = ToolFactory()
 toolFactory.register_tool(ToolWhoCreateDocumentOfTCUReport().description, ToolWhoCreateDocumentOfTCUReport())
 toolFactory.register_tool(ToolWhoCreateWorkReportHistory().description, ToolWhoCreateWorkReportHistory())
 toolFactory.register_tool(ToolWhoCreateFinancialReport().description, ToolWhoCreateFinancialReport())
 toolFactory.register_tool(ToolWhichCreatesAReportOfTheMostSoldProducts().description, ToolWhichCreatesAReportOfTheMostSoldProducts())
+toolFactory.register_tool(ToolWhichAddNewEmployent().description, ToolWhichAddNewEmployent())
 toolFactory.generate_tools_vector_database()
 
 # Instantiate the API
@@ -48,7 +52,15 @@ async def answer(command: str):
     # Starting Agent with the tool to execute the command
     agent = Agent(tool)
     result = agent.executeCommand(command)
-    return result
+
+    return Response(content=json.dumps(result), media_type="application/json")
+
+
+
+
+
+
+
 
 
 
