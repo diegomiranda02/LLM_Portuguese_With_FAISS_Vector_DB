@@ -36,7 +36,9 @@ O exemplo para demonstrar a utilização do projeto na prática é a solicitaç�
 
 ![Passo a passo do uso do framework 1 (1)](https://github.com/diegomiranda02/LLM_Portuguese_With_FAISS_Vector_DB/assets/9868024/492cf05e-4f21-4912-85ff-4e53d3f04d3e)
 
+# Para executar o programa siga os seguintes passos:
 
+1 - Instalar as dependências descritas no arquivo 
 
 A implementação feita nesse artigo foi para demonstrar que é possivel utilizar LLMs com um custo mais baixo, acessando as funcionalidades dos sistemas já existentes nas empresas. Nessa solução não foram implementadas a segurança, a autenticação e a autorização de acesso aos dados. Para implantar em produção, todos esses detalhes precisam ser avaliados de acordo com a necessidade do projeto.
 
