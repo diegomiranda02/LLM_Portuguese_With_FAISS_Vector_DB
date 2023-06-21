@@ -42,6 +42,7 @@ O exemplo para demonstrar a utilização do projeto na prática é a solicitaç�
 - Baixar o projeto https://github.com/diegomiranda02/python_api_server e executar em uma porta distinta das que já estão sendo utilizadas por outros serviços. IMPORTANTE: A porta definida ao executar o serviço deverá ser a mesma utilizada para informar às ferramentas qual URL acessar.
 - Executar o serviço API server do projeto anterior
 - No projeto atual executar o python3 main_CONSOLE.py para executar no console.
+- Para executar o serviço de API e consumir os dados utilizando a interface gráfica do Streamlit, executar o comando uvicorn main:app
 
 Caso deseje utilizar uma interface web, siga o dois passos a seguir:
 - Baixe o projeto https://github.com/diegomiranda02/frontend_LLM_Project e execute a aplicação em Streamlit
