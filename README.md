@@ -21,12 +21,12 @@ FIGURA 1
 
 Para o projeto serão utilizadas as seguintes ferramentas:
 
-FAISS como banco de dados de vetor;
-Um algoritmo de LLM da Hugging Face para embedding
-Um algoritmo da hugging face para Question Answering
-Um projeto desenvolvido em Python para possibilitar a implementação da abordagem descrito nesse artigo.
-Uma interface em Streamlit para acesso do usuário (Código fonte em https://github.com/diegomiranda02/frontend_LLM_Project)
-Um serviço web para disponibilizar os endpoints que fornecerão os acessos aos sistemas (Código fonte em https://github.com/diegomiranda02/python_api_server)
+- FAISS como banco de dados de vetor;
+- Um algoritmo de LLM da Hugging Face para embedding
+- Um algoritmo da hugging face para Question Answering
+- Um projeto desenvolvido em Python para possibilitar a implementação da abordagem descrito nesse artigo.
+- Uma interface em Streamlit para acesso do usuário (Código fonte em https://github.com/diegomiranda02/frontend_LLM_Project)
+- Um serviço web para disponibilizar os endpoints que fornecerão os acessos aos sistemas (Código fonte em https://github.com/diegomiranda02/python_api_server)
 
 Um ponto importante para esclarecer é que foram utilizados dois algoritmos de LLMs, um para embedding e outro para question answering, mas é possível utilizar somente um para os dois propósitos. A intenção foi mostrar que é possível combinar mais de um algoritmo nessa solução.
 
